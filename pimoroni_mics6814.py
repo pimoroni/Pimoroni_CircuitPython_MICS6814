@@ -56,14 +56,13 @@ class Pimoroni_MICS6814:
     """Driver for the MICS6814 gas sensor."""
 
     def __init__(self, ox_pin, red_pin, nh3_pin, enable_pin=None):
-        self._enable_pin = None
+        self._enable_pin = enable_pin
         if enable_pin is not None:
-            self._enable_pin = digitalio.DigitalInOut(enable_pin)
             self._enable_pin.direction = digitalio.Direction.OUTPUT
             self._enable_pin.value = True
-        self._ox_adc = analogio.AnalogIn(ox_pin)
-        self._red_adc = analogio.AnalogIn(red_pin)
-        self._nh3_adc = analogio.AnalogIn(nh3_pin)
+        self._ox_adc = ox_pin
+        self._red_adc = red_pin
+        self._nh3_adc = nh3_pin
 
     def read_all(self):
         """Return gas resistance for oxidising, reducing and NH3"""
