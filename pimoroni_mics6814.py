@@ -53,7 +53,14 @@ NH3: {nh3:05.03f} Ohms"""
 
 
 class Pimoroni_MICS6814:
-    """Driver for the MICS6814 gas sensor."""
+    """Driver for the MICS6814 gas sensor.
+
+    :param ~analogio.AnalogIn ox_pin: The oxidising analog input
+    :param ~analogio.AnalogIn red_pin: The reducing analog input
+    :param ~analogio.AnalogIn nh3_pin: The nh3 analog input
+    :param ~digitalio.DigitalInOut enable_pin: The enable_pin output
+
+    """
 
     def __init__(self, ox_pin, red_pin, nh3_pin, enable_pin=None):
         self._enable_pin = enable_pin
