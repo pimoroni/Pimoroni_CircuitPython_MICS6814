@@ -26,7 +26,7 @@ Implementation Notes
 """
 
 import digitalio
-import analogio
+import analogio  # pylint: disable=unused-import
 
 
 __version__ = "0.0.1"
