@@ -33,9 +33,7 @@ setup(
     # Author details
     author="Philip Howard",
     author_email="phil@pimoroni.com",
-    install_requires=[
-        "Adafruit-Blinka",
-    ],
+    install_requires=["Adafruit-Blinka",],
     license="MIT",
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
