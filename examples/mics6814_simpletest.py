@@ -1,7 +1,11 @@
 # SPDX-FileCopyrightText: 2017 Scott Shawcroft, written for Adafruit Industries
 #
 # SPDX-License-Identifier: Unlicense
-"""Simple example of the MICS6814 library."""
+"""Simple example of the MICS6814 library.
+
+Pins are the default for the MICS6814 on the Pimoroni Enviro+ FeatherWing used with an M4 Express.
+
+"""
 import time
 import analogio
 import digitalio
